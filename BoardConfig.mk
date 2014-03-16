@@ -23,6 +23,11 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 
+# Use the CM PowerHAL
+TARGET_USES_CM_POWERHAL := true
+CM_POWERHAL_EXTENSION := qcom
+TARGET_POWERHAL_NO_TOUCH_BOOST := true
+
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
@@ -36,7 +41,7 @@ TARGET_NO_BOOTLOADER := true
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/lge/mako
 TARGET_KERNEL_CONFIG := slim_mako_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7-13.04/bin/arm-linux-gnueabihf-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.8-13.06/bin/arm-linux-gnueabihf-
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
